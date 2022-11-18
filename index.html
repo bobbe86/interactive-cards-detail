@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <img class="ccFront" src="./images/bg-card-front.png" alt="purple credit card front">
+
+    <img class="ccBack" src="./images/bg-card-back.png" alt="credit card back">
+
+    <img class="ccLogo" src="./images/card-logo.svg" alt="white circle">
+
+    <span class="ccNum">0000 0000 0000 0000</span>
+    <span class="ccName">Jane Appleseed</span>
+    <span class="ccExpiration">00/00</span>
+    <span class="ccCvc">000</span>
+    
+    
+    <form class="ccForm" action="">
+
+      <label for="cardName">Cardholder Name</label>
+      <input type="text" id="cardName" placeholder=" Jane Appleseed" required>
+
+      <label for="ccn">Card Number</label>
+      <input id="ccn" type="tel" oninvalid="" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"
+        maxlength="19" placeholder=" 1234 5678 9123 0000">
+
+      <div class="cvcAndExp">
+
+        <div class="expire">
+
+          <label for="expireDate">Exp. Date (MM/YY)</label>
+
+          <div class="expireFlex">
+            <input type="month" id="expireDate" size="2" placeholder="MM" inputmode="numeric" required>
+            <input type="month" id="expireDate" size="2" placeholder="YY" inputmode="numeric" required>
+          </div>
+        </div>
+
+        <div class="cvc">
+
+          <label for="cvc">CVC</label>
+          <input type="tel" name="" id="cvc" size="3" maxlength="3" placeholder="123" inputmode="numeric" required>
+        </div>
+      </div>
+
+
+
+      <button class="confirmBtn">Confirm</button>
+    </form>
+  </main>
+
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
